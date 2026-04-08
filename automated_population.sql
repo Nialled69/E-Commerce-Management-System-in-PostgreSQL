@@ -1,3 +1,5 @@
+-- Procedure to populate the users table with random dummy data
+
 create procedure populate_automated_data()
 language plpgsql
 as $$
@@ -16,6 +18,9 @@ begin
 end;
 $$;
 
+
+
+-- Procedure to populate the products table with random dummy data
 
 create procedure populate_products()
 language plpgsql
@@ -36,11 +41,10 @@ begin
 end;
 $$;
 
+
+
+-- Executing the procedures
+
 call populate_products();
 
 call populate_automated_data();
-
-
-select * from users limit 10;
-
-select * from products;
